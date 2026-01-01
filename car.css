@@ -1,0 +1,537 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #111;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+    background: transparent;
+}
+
+.center {
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.center h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.left {
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+}
+
+.toggle {
+    text-decoration: none;
+    font-size: 20px;
+    color: #6a6969;
+    margin-right: 10px;
+}
+
+.offcanvas-header {
+    background-color: rgb(212, 212, 15);
+}
+
+.offcanvas-body {
+    background-color: rgb(212, 212, 15);
+}
+
+.btn-close {
+    text-align: right;
+    justify-content: right;
+}
+
+#offcanvasWithBothOptions {
+    width: 600px;
+    max-width: 80%;
+}
+
+#offcanvasWithBothOptions .offcanvas-body {
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+#offcanvasWithBothOptions ul li {
+    list-style: none;
+}
+
+#offcanvasWithBothOptions ul li a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #111;
+}
+
+#offcanvasWithBothOptions ul li a:hover {
+    background-color: #f0c000;
+    color: #fff;
+    border-radius: 5px;
+}
+
+main {
+    margin-top: -50px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    min-width: 100%;
+    min-height: calc(100% + 60px);
+    transform: translateX(-50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    text-align: left;
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: white;
+    line-height: 1.3;
+    max-width: 900px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: block;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.7;
+    max-width: 700px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    max-height: 3.4em;
+}
+
+.btn-orgi {
+    background: transparent;
+    color: white;
+    border: 1.5px solid white;
+    padding: 14px 45px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-orgi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.btn-orgi:hover {
+    color: white;
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.btn-orgi:hover::before {
+    left: 0;
+}
+
+.bar-2 {
+    background-color: #000000;
+    padding: 10px;
+}
+
+.text-bnr2 {
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.text-bnr2 h1 {
+    color: #fff;
+    font-size: 44px;
+    font-weight: lighter;
+    letter-spacing: 0.5em;
+}
+
+.text-bnr2 p {
+    color: #fff;
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.bnr-3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/bmw-2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.bnr-3 .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.bnr-text3 {
+    position: relative;
+    max-width: 500px;
+    z-index: 1;
+}
+
+.bnr-text3 h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.bnr-text3 p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin-bottom: 35px;
+}
+
+.buttons-bnr3 {
+    display: flex;
+    gap: 20px;
+}
+
+.show-border {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show-border:hover {
+    background: #fff;
+    color: #000;
+}
+
+.hide-border {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bnr-4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/bmw-3.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.bnr-4 .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.bnr-text4 {
+    position: relative;
+    max-width: 500px;
+    z-index: 1;
+}
+
+.bnr-text4 h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #6a6969;
+}
+
+.bnr-text4 p {
+    font-size: 19px;
+    opacity: 0.85;
+    margin-bottom: 35px;
+    color: #111;
+}
+
+.buttons-bnr4 {
+    display: flex;
+    gap: 20px;
+}
+
+.show-border {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show-border:hover {
+    background: #fff;
+    color: #000;
+}
+
+.hide-border {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bnr-5 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/bmw-4.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.bnr-5 .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+}
+
+.bnr-text5 {
+    position: relative;
+    max-width: 500px;
+    z-index: 1;
+}
+
+.bnr-text5 h1 {
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.bnr-text5 p {
+    font-size: 22px;
+    opacity: 0.85;
+    margin-bottom: 35px;
+    color: #fffb00;
+}
+
+.buttons-bnr5 {
+    display: flex;
+    gap: 20px;
+}
+
+.show-border {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 28px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show-border:hover {
+    background: #fff;
+    color: #000;
+}
+
+.hide-border {
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Bmw-footer {
+    background: #000;
+    color: #fff;
+    padding: 80px 100px 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    width: 80px;
+}
+
+.footer-line {
+    border: none;
+    height: 1px;
+    background: #f7ff00;
+    margin-bottom: 60px;
+}
+
+.footer-content {
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.footer-column h3 {
+    color: #f7ff00;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.footer-social i {
+    border: 1px solid #f7ff00;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    display: flex;
+    gap: 40px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    /* كل البانرز */
+    .bnr-3,
+    .bnr-4,
+    .bnr-5 {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+        background-position: center right;
+    }
+    /* النص */
+    .bnr-text3,
+    .bnr-text4,
+    .bnr-text5 {
+        max-width: 100%;
+    }
+    .bnr-text3 h1,
+    .bnr-text4 h1,
+    .bnr-text5 h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    .bnr-text3 p,
+    .bnr-text4 p,
+    .bnr-text5 p {
+        font-size: 15px;
+    }
+    /* الأزرار */
+    .buttons-bnr3,
+    .buttons-bnr4,
+    .buttons-bnr5 {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .show-border,
+    .hide-border {
+        width: 100%;
+        text-align: center;
+    }
+    header {
+        padding: 10px 15px;
+    }
+    .center h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Bmw-footer {
+        padding: 50px 20px;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
